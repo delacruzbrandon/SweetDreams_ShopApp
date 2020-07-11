@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".fragments.MenuFragment">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fragmentMenu_circle_imageView"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_margin="16dp"
+                    android:background="#E385FF"/>
+
+                <TextView
+                    android:id="@+id/fragmentMenu_username_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="John De Lopez"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toEndOf="@+id/fragmentMenu_circle_imageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/fragmentMenu_circle_imageView"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/fragmentMenu_email_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="john_delopez@gmail.com"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@id/fragmentMenu_username_textView"
+                    app:layout_constraintStart_toStartOf="@id/fragmentMenu_username_textView"
+                    app:layout_constraintEnd_toEndOf="@id/fragmentMenu_username_textView"
+                    android:textColor="#6A6A6A"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Edit Profile"
+                    android:textSize="12sp"
+                    android:background="#E385FF"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/fragmentMenu_email_textView"
+                    app:layout_constraintBottom_toBottomOf="@id/fragmentMenu_circle_imageView"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
