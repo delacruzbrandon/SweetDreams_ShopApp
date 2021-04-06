@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="productData"
+            type="dcbrh.ph.sweetdreams.ProductDetails" >
+        </variable>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:weightSum="100"
+        tools:context=".ProductDetailActivity">
+
+
+        <ImageView
+            android:id="@+id/imageView_photo_productDetail"
+            android:layout_width="match_parent"
+            android:layout_height="490dp"
+            android:background="@android:color/white"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView_title_productDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{productData.itemName}"
+            android:fontFamily="@font/roboto_light"
+            android:textSize="34sp"
+            android:textColor="#261F1F"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@{productData.itemPrice}"
+            android:textColor="#261F1F"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@id/textView_title_productDetail"
+            app:layout_constraintStart_toStartOf="@id/textView_title_productDetail"
+            app:layout_constraintTop_toBottomOf="@id/textView_title_productDetail" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView_title_productDetail"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/textView_sizes_productDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Size"
+            android:textSize="24sp"
+            android:layout_margin="16dp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/imageView_photo_productDetail"/>
+
+        <Spinner
+            android:background="@android:color/darker_gray"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_sizes_productDetail"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

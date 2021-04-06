@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FADAF9"
+        tools:context=".LoginActivity">
+
+        <ImageView
+            android:id="@+id/imageView_sweetDreamsLogo_loginActivity"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/sweet_dreams_logo"
+            android:layout_marginHorizontal="225dp"
+            android:layout_marginVertical="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/editLayout_input_activityLogin"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/round_corner_white_5dp"
+            android:elevation="6dp"
+            android:layout_marginHorizontal="50dp"
+            app:layout_constraintTop_toBottomOf="@id/imageView_sweetDreamsLogo_loginActivity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#B3515C6F"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editText_email_activityLogin"
+                app:layout_constraintBottom_toTopOf="@id/editText_password_activityLogin"/>
+            
+            <ImageView
+                android:id="@+id/icon_email_loginActivity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/ic_baseline_email_24"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/editText_email_activityLogin"
+                app:layout_constraintBottom_toBottomOf="@id/editText_email_activityLogin"/>
+
+            <ImageView
+                android:id="@id/icon_password_loginActivity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="@id/editText_password_activityLogin"
+                app:layout_constraintStart_toStartOf="@+id/icon_email_loginActivity"
+                app:layout_constraintTop_toTopOf="@id/editText_password_activityLogin"
+                app:srcCompat="@drawable/ic_baseline_lock_24" />
+
+            <Button
+                android:id="@+id/button_showPassword_loginActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="#00000000"
+                android:fontFamily="@font/roboto"
+                android:text="Show"
+                android:textColor="#640680"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/editText_password_activityLogin"
+                app:layout_constraintEnd_toEndOf="@id/editText_email_activityLogin"
+                app:layout_constraintTop_toTopOf="@id/editText_password_activityLogin" />
+
+            <EditText
+                android:id="@+id/editText_email_activityLogin"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:backgroundTint="#00000000"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="16dp"
+                android:text=""
+                android:textColor="#434343"
+                android:textColorHint="#515C6F"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/icon_email_loginActivity"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_password_activityLogin"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="16dp"
+                android:text=""
+                android:textColor="#434343"
+                android:textColorHint="#515C6F"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/button_showPassword_loginActivity"
+                app:layout_constraintStart_toStartOf="@id/editText_email_activityLogin" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textView_register_activityLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Don't have an account?"
+            android:textColor="#434343"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/editLayout_input_activityLogin"
+            app:layout_constraintTop_toBottomOf="@id/editLayout_input_activityLogin" />
+
+        <Button
+            android:id="@+id/button_createAccount_activityLogin"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="58dp"
+            android:background="@drawable/round_corners_button_5dp"
+            android:text="Login user"
+            android:textSize="24dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/editLayout_input_activityLogin"
+            app:layout_constraintStart_toStartOf="@id/editLayout_input_activityLogin"
+            app:layout_constraintTop_toBottomOf="@id/textView_register_activityLogin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
